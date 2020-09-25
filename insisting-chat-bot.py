@@ -1,5 +1,6 @@
 from random import choice
 
+
 def get_bot_response(user_response, sequence_events):
 
   # bot responses
@@ -21,13 +22,8 @@ def get_bot_response(user_response, sequence_events):
     start_game = True
     return choice(bot_response_play_consecutive_round), start_game # ESTO DEVLVERA UNA LISTA, TIENES QUE DESPUES DIVIDIR LA LISTA ANTES DE ENSEÑAR LA RESPUESTA DEL BOT
 
-
-
-print("Welcome, I'm Lyra! The best bot assistance you will ever\nmeet. I will help you to take the best decision of your life.\nAfter this decision definetly your life will change. Mark my words!\nIn what will I help you? Hear you asking...\nIn deciding if you want to play a game or not.\n")
-print("The game is simple. You will go through a obstacle course.\nIn the obstacle course you can do one of two things jump or\nduck. The track will always be the same but the catch is how\nfast can you complete it. But don't worry you will never beat me.\n")
-print("The game will look like this.\n")
-print("This are the controls: Jump 'P' and Duck 'L'")
-print("""
+def get_mini_game_scenario() :
+    game_scenarios = ["""
 ******************************************************************************
                                                                   |    |        
                                                                   |    |
@@ -37,6 +33,26 @@ print("""
       |    |
       |    |                                                                       
 ******************************************************************************
-                                                                                    """)
+                                                                                """
+    ]
+    return(game_scenarios[0])
+
+
+print("Welcome, I'm Lyra! The best bot assistance you will ever\nmeet. I will help you to take the best decision of your life.\nAfter this decision definetly your life will change. Mark my words!\nIn what will I help you? Hear you asking...\nIn deciding if you want to play a game or not.\n")
+print("The game is simple. You will go through a obstacle course.\nIn the obstacle course you can do one of two things jump or\nduck. The track will always be the same but the catch is how\nfast can you complete it. But don't worry you will never beat me.\n")
+print("The game will look like this.\n")
+print("This are the controls: Jump 'P' and Duck 'L'")
+# print("""
+# ******************************************************************************
+#                                                                   |    |        
+#                                                                   |    |
+#                                    ╳╳╳╳╳╳                         ██████ 
+#                                    ╳╳╳╳╳╳                                                                         
+#       ▆▆▆▆▆▆                       ╳╳╳╳╳╳
+#       |    |
+#       |    |                                                                       
+# ******************************************************************************
+#                                                                                     """)
+print(get_mini_game_scenario())
 user_response = input("Now the important decision... You want to play it? Yes or No?")
 print(user_response)
