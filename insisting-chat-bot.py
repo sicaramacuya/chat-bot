@@ -1,6 +1,14 @@
 from random import choice
 
+# This functions are just the greetings just helps clean up the code.
+def greetings_Lyra():
+    print("Welcome, I'm Lyra! The best bot assistance you will ever\nmeet. I will help you to take the best decision of your life.\nAfter this decision definetly your life will change. Mark my words!\nIn what will I help you? Hear you asking...\nIn deciding if you want to play a game or not.\n")
+    print("The game is simple. You will go through a obstacle course.\nIn the obstacle course you can do one of two things jump or\nduck. The track will always be the same but the catch is how\nfast can you complete it. But don't worry you will never beat me.\n")
+    print("The game will look like this.\n")
+    print("This are the controls: Jump 'P' and Duck 'L'")
+    print(get_mini_game_scenario(5))
 
+# This function will provide the responses from the bot.
 def get_bot_response(user_response, sequence_events):
 
   # bot responses
@@ -22,108 +30,109 @@ def get_bot_response(user_response, sequence_events):
     start_game = True
     return choice(bot_response_play_consecutive_round), start_game # ESTO DEVLVERA UNA LISTA, TIENES QUE DESPUES DIVIDIR LA LISTA ANTES DE ENSEÑAR LA RESPUESTA DEL BOT
 
-def get_mini_game_scenario(index) :
+# This function just contains the posible senarios of the course.
+def get_mini_game_scenario(index):
     game_scenarios = ["""
-***********************************000*******************************************
-                                                                    |    |
-                                                                    |    |
-                                   ╳╳╳╳╳╳                           ██████
-                                   ╳╳╳╳╳╳
-                                   ╳╳╳╳╳╳
+    ***********************************000****************************************
+                                                                        |    |
+                                                                        |    |
+                                    ╳╳╳╳╳╳                              ██████
+                                    ╳╳╳╳╳╳
+                                    ╳╳╳╳╳╳
 
 
-******************************************************************************
-""", """
-*************************************111*****************************************
-                                   |    |
-                                   |    |
-                                   ██████
+    ******************************************************************************
+    """, """
+    *************************************111**************************************
+                                    |    |
+                                    |    |
+                                    ██████
 
-                                   ╳╳╳╳╳╳
-                                   ╳╳╳╳╳╳
-                                   ╳╳╳╳╳╳
-******************************************************************************
-""", """
-************************************222******************************************
+                                    ╳╳╳╳╳╳
+                                    ╳╳╳╳╳╳
+                                    ╳╳╳╳╳╳
+    ******************************************************************************
+    """, """
+    ************************************222***************************************
 
-                                   ╳╳╳╳╳╳                         
-                                   ╳╳╳╳╳╳
-                                   ╳╳╳╳╳╳
-                                   ▆▆▆▆▆▆
-                                   |    |
-                                   |    |
-******************************************************************************
-""", """
-*************************************333*****************************************
-    |    |                                                          |    |
-    |    |                                                          |    |
-    ██████                                                          ██████
+                                    ╳╳╳╳╳╳                         
+                                    ╳╳╳╳╳╳
+                                    ╳╳╳╳╳╳
+                                    ▆▆▆▆▆▆
+                                    |    |
+                                    |    |
+    ******************************************************************************
+    """, """
+    *************************************333**************************************
+        |    |                                                          |    |
+        |    |                                                          |    |
+        ██████                                                          ██████
 
-                                   ╳╳╳╳╳╳
-                                   ╳╳╳╳╳╳
-                                   ╳╳╳╳╳╳
-******************************************************************************
-""", """
-************************************444******************************************
-    |    |
-    |    |
-    ██████
+                                    ╳╳╳╳╳╳
+                                    ╳╳╳╳╳╳
+                                    ╳╳╳╳╳╳
+    ******************************************************************************
+    """, """
+    ************************************444***************************************
+        |    |
+        |    |
+        ██████
 
-                                   ╳╳╳╳╳╳                           ▆▆▆▆▆▆
-                                   ╳╳╳╳╳╳                           |    |
-                                   ╳╳╳╳╳╳                           |    |
-******************************************************************************
-""", """
-************************************555******************************************
-                                                                    |    |
-                                   ╳╳╳╳╳╳                           |    |
-                                   ╳╳╳╳╳╳                           ██████
-                                   ╳╳╳╳╳╳
-    ▆▆▆▆▆▆                       
-    |    |
-    |    |
-******************************************************************************
-""", """
-************************************666******************************************
+                                    ╳╳╳╳╳╳                              ▆▆▆▆▆▆
+                                    ╳╳╳╳╳╳                              |    |
+                                    ╳╳╳╳╳╳                              |    |
+    ******************************************************************************
+    """, """
+    ************************************555***************************************
+                                                                        |    |
+                                    ╳╳╳╳╳╳                              |    |
+                                    ╳╳╳╳╳╳                              ██████
+                                    ╳╳╳╳╳╳
+        ▆▆▆▆▆▆                       
+        |    |
+        |    |
+    ******************************************************************************
+    """, """
+    ************************************666***************************************
 
-                                   ╳╳╳╳╳╳
-                                   ╳╳╳╳╳╳
-                                   ╳╳╳╳╳╳
-    ▆▆▆▆▆▆                                                          ▆▆▆▆▆▆
-    |    |                                                          |    |                       
-    |    |                                                          |    |
-******************************************************************************
-""", """
-*************************************777*****************************************
-                                       |    |
-                               ╳ ╳╳ ╳╳╳|    |
-                                ╳╳╳ ╳╳╳██████
-                                   ╳╳╳╳╳╳
-                                   
- 
-
-******************************************************************************
-""", """
-************************************888******************************************
-
-
-
-                                   ╳╳╳╳╳╳
-                                 ╳╳╳ ╳╳╳▆▆▆▆▆▆
-                                ╳ ╳╳╳ ╳╳|    |
+                                    ╳╳╳╳╳╳
+                                    ╳╳╳╳╳╳
+                                    ╳╳╳╳╳╳
+        ▆▆▆▆▆▆                                                          ▆▆▆▆▆▆
+        |    |                                                          |    |                       
+        |    |                                                          |    |
+    ******************************************************************************
+    """, """
+    *************************************777**************************************
                                         |    |
-******************************************************************************
-"""
+                                ╳ ╳╳ ╳╳╳|    |
+                                 ╳╳╳ ╳╳╳██████
+                                    ╳╳╳╳╳╳
+                                    
+    
+
+    ******************************************************************************
+    """, """
+    ************************************888***************************************
+
+
+
+                                    ╳╳╳╳╳╳
+                               ╳╳╳ ╳╳╳▆▆▆▆▆▆
+                              ╳ ╳╳╳ ╳╳|    |
+                                      |    |
+    ******************************************************************************
+    """
     ]
 
     return(game_scenarios[index])
 
+def obstacle_course():
+    # The number on this list represent the index that will be provided to the get_mini_game_scenario() to display the correct course's sequence.
+    obstacle_order = [0, 1, 3, 1, 4, 2, 5, 1, 4, 2, 6, 2, 5, 1, 3, 1, 4, 2, 6, 2, 6, 2, 5, 1, 3, 1, 4, 2, 5, 1, 4, 2, 6, 2, 5, 1, 3, 1, 4, 2]
 
-print("Welcome, I'm Lyra! The best bot assistance you will ever\nmeet. I will help you to take the best decision of your life.\nAfter this decision definetly your life will change. Mark my words!\nIn what will I help you? Hear you asking...\nIn deciding if you want to play a game or not.\n")
-print("The game is simple. You will go through a obstacle course.\nIn the obstacle course you can do one of two things jump or\nduck. The track will always be the same but the catch is how\nfast can you complete it. But don't worry you will never beat me.\n")
-print("The game will look like this.\n")
-print("This are the controls: Jump 'P' and Duck 'L'")
+    correct_movements = []
+# --------------------------------------------------------------------------------------------------------
 
-print(get_mini_game_scenario(5))
-user_response = input("Now the important decision... You want to play it? Yes or No?")
-print(user_response)
+greetings_Lyra()
+user_response = input("Now the important decision... You want to play it? Yes or No?\n\n\n\n\n")
