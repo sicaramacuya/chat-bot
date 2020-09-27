@@ -3,15 +3,17 @@ import time
 
 # This functions are just the greetings just helps clean up the code.
 def greetings_Lyra():
-    print()
-    print("Welcome, I'm Lyra! The best bot assistance you will ever meet. I will help you to take the best decision of your life.\nAfter this decision definetly your life will change. Mark my words! In what will I help you? Hear you asking... Basically\ndeciding if you want to play a game or not.\n")
-    time.sleep(7.5)
-    print("The game is simple. You will go through a obstacle course. In the obstacle course you can do one of two things jump or\nduck. The track will always be the same but the catch is how fast can you complete it.\n")
-    time.sleep(5)
-    print("The game will look like this.\n")
-    time.sleep(0.5)
-    print("This are the controls: Jump 'P' and Duck 'L'")
-    get_mini_game_scenario(5)
+  print()
+  print("Welcome, I'm Lyra! The best bot assistance you will ever meet. I will help you to take the best decision of your life.\nAfter this decision definetly your life will change. Mark my words! In what will I help you? Hear you asking... Basically\ndeciding if you want to play a game or not.\n")
+  time.sleep(7.5)
+  print("The game is simple. You will go through a obstacle course. In the obstacle course you can do one of two things jump or\nduck. The track will always be the same but the catch is how fast can you complete it.\n")
+  time.sleep(5)
+  print("The game will look like this.\n")
+  time.sleep(0.5)
+  print("This are the controls: Jump 'P' and Duck 'L'")
+  get_mini_game_scenario(5)
+  print("Now the important decision... You want to play it? Yes or No?")
+
 
 # This function will provide the responses from the bot.
 def get_bot_response(user_response, sequence_events):
@@ -170,7 +172,7 @@ def start_obstacle_course():
   # This is when the counter starts, before starting the game.
   total_amount_playing = time.perf_counter()
 
-  # Each iteration of the for loop the movement variable will have the correct movement.
+  # Each iteration of the for loop the "movement" variable will have the correct movement.
   for movement in correct_movements:
     # The values 1 and 2 inside the obstacle_order list just represent transition scenarios inside get_mini_game_scenario() function.
     if obstacle_order[obstacle_index] == 1 or obstacle_order[obstacle_index] == 2:
@@ -237,7 +239,6 @@ def start_obstacle_course():
 # --------------------------------------------------------------------------------------------------------
 
 greetings_Lyra()
-print("Now the important decision... You want to play it? Yes or No?")
 
 # This will help vary the answers inside the get_bot_response() function.
 sequence_events = 0
@@ -251,7 +252,7 @@ while True:
   if user_response == "no":
     start_game = get_bot_response(user_response, sequence_events)
 
-  # This will run the program.
+  # This will run the obstacle course.
   elif user_response == "yes":
     print("\n\n\nREMEMBER: This are the controls: Jump 'P' and Duck 'L'")
     start_obstacle_course()
