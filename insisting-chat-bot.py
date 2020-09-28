@@ -14,7 +14,6 @@ def greetings_Lyra():
   get_mini_game_scenario(5)
   print("Now the important decision... You want to play it? Yes or No?")
 
-
 # This function will provide the responses from the bot.
 def get_bot_response(user_response, sequence_events):
   # Bot responses
